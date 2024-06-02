@@ -92,13 +92,13 @@ def solve_it(input_data):
         for i in range(nodeCount):
             or_solution = or_tools_tsp(points, nodeCount, i)
             #print(or_solution)
-            if nodeCount not in [51,100]:
+            if nodeCount not in [51, 100]:
                 break
             if or_solution["distance"] < obj:
                 best_solution = or_solution["route"]
                 obj = or_solution["distance"]
         # print(or_solution)
-        if nodeCount not in [51,100]:
+        if nodeCount not in [51, 100]:
             best_solution = or_solution["route"]
             obj = or_solution["distance"]
         solution = []
